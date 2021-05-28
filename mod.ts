@@ -2,6 +2,21 @@
  * Authenticates the given request with the given user-password table.
  * Returns unauthorized response if the request is not authenticated, otherwise
  * returns undefined.
+ *
+ * ```
+ * import { basicAuth } from "https://deno.land/x/basic_auth@v1.0.0/mod.ts";
+ *
+ * addEventListener("fetch", (e) => {
+ *   const unauthorized = basicAuth(e.request, "Access to my site", {
+ *     "user": "password",
+ *   });
+ *   if (unauthorized) {
+ *     e.respondWith(unauthorized);
+ *     return;
+ *   }
+ *   e.respondWith(new Response("Your are authorized!"));
+ * });
+ * ```
  */
 export function basicAuth(
   request: Request,

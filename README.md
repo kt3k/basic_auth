@@ -12,7 +12,9 @@ import `basicAuth` function from the module url and use it like the below:
 import { basicAuth } from "https://deno.land/x/basic_auth@v1.0.0/mod.ts";
 
 addEventListener("fetch", (e) => {
-  const unauthorized = basicAuth(e.request, "Access to my site", { "user": "password" });
+  const unauthorized = basicAuth(e.request, "Access to my site", {
+    "user": "password",
+  });
   if (unauthorized) {
     e.respondWith(unauthorized);
     return;
@@ -21,7 +23,8 @@ addEventListener("fetch", (e) => {
 });
 ```
 
-Replace `user` and `password` part with your credentials. You can also set multiple credentials by setting multiple key value pairs in the 3rd parameter.
+Replace `user` and `password` part with your credentials. You can also set
+multiple credentials by setting multiple key value pairs in the 3rd parameter.
 
 # [API doc](https://doc.deno.land/https/deno.land/x/basic_auth/mod.ts)
 
