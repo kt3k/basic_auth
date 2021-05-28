@@ -1,6 +1,8 @@
 # basic_auth v0.0.1
 
-Module for performing Basic Auth in Deno Deploy or Cloudflare Workers.
+Module for performing Basic Auth in Deno Deploy.
+
+[Demo](https://basic-auth-demo.deno.dev/)
 
 # Usage
 
