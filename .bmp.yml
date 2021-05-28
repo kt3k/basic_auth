@@ -1,0 +1,6 @@
+version: 0.0.1
+commit: 'chore: bump to v%.%.%'
+files:
+  README.md:
+    - basic_auth v%.%.%
+    - https://deno.land/x/basic_auth@v%.%.%/mod.ts
