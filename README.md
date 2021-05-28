@@ -23,6 +23,8 @@ addEventListener("fetch", (e) => {
 
 Replace `user` and `password` part with your credentials. You can also set multiple credentials by setting multiple key value pairs in the 3rd parameter.
 
+# [API doc](https://doc.deno.land/https/deno.land/x/basic_auth/mod.ts)
+
 # LICENSE
 
 MIT
