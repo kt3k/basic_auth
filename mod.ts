@@ -1,3 +1,5 @@
+import secureCompare from "https://deno.land/x/secure_compare@1.0.0/mod.ts";
+
 /**
  * Authenticates the given request with the given user-password table.
  * Returns unauthorized response if the request is not authenticated, otherwise
@@ -28,8 +30,9 @@ export function basicAuth(
     const match = authorization.match(/^Basic\s+(.*)$/);
     if (match) {
       const [user, pw] = atob(match[1]).split(":");
-      for (const [u, p] of Object.entries(userPasswordTable)) {
-        if (user === u && pw == p) {
+      if (Object.prototype.hasOwnProperty.call(userPasswordTable, user)) {
+        const expectedPw = userPasswordTable[user];
+        if (secureCompare(pw, expectedPw)) {
           return;
         }
       }
