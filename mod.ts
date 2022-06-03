@@ -16,7 +16,7 @@ import secureCompare from "https://deno.land/x/secure_compare@1.0.0/mod.ts";
  *     e.respondWith(unauthorized);
  *     return;
  *   }
- *   e.respondWith(new Response("Your are authorized!"));
+ *   e.respondWith(new Response("You are authorized!"));
  * });
  * ```
  */
