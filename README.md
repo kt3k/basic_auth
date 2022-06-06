@@ -19,7 +19,7 @@ addEventListener("fetch", (e) => {
     e.respondWith(unauthorized);
     return;
   }
-  e.respondWith(new Response("Your are authorized!"));
+  e.respondWith(new Response("You are authorized!"));
 });
 ```
 
