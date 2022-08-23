@@ -1,5 +1,13 @@
 import secureCompare from "https://deno.land/x/secure_compare@1.0.0/mod.ts";
 
+interface MapWithGettableValues {
+  get(headerName: string): string;
+}
+
+interface Requestlike {
+  headers: MapWithGettableValues;
+}
+
 /**
  * Authenticates the given request with the given user-password table.
  * Returns unauthorized response if the request is not authenticated, otherwise
@@ -21,7 +29,7 @@ import secureCompare from "https://deno.land/x/secure_compare@1.0.0/mod.ts";
  * ```
  */
 export function basicAuth(
-  request: Request,
+  request: Requestlike,
   realm: string,
   userPasswordTable: Record<string, string>,
 ): Response | undefined {
