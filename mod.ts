@@ -1,10 +1,10 @@
 import secureCompare from "https://deno.land/x/secure_compare@1.0.0/mod.ts";
 
-interface MapWithGettableValues {
+export interface MapWithGettableValues {
   get(headerName: string): string;
 }
 
-interface Requestlike {
+export interface Requestlike {
   headers: MapWithGettableValues;
 }
 
