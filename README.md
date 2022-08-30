@@ -1,4 +1,4 @@
-# basic_auth v1.1.0
+# basic_auth v1.1.1
 
 Module for performing Basic Auth in Deno Deploy.
 
@@ -9,7 +9,7 @@ Module for performing Basic Auth in Deno Deploy.
 import `basicAuth` function from the module url and use it like the below:
 
 ```ts
-import { basicAuth } from "https://deno.land/x/basic_auth@v1.1.0/mod.ts";
+import { basicAuth } from "https://deno.land/x/basic_auth@v1.1.1/mod.ts";
 
 addEventListener("fetch", (e) => {
   const unauthorized = basicAuth(e.request, "Access to my site", {
