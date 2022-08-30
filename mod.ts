@@ -1,7 +1,7 @@
 import secureCompare from "https://deno.land/x/secure_compare@1.0.0/mod.ts";
 
 export interface MapWithGettableValues {
-  get(headerName: string): string;
+  get(headerName: string): string | null;
 }
 
 export interface Requestlike {
